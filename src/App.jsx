@@ -1,3 +1,4 @@
+
 import ListItem from './ListItem.jsx'
 
 const personas = [{
@@ -37,6 +38,7 @@ ciudad = {personas.ciudad}/>
   </ul>
   
   </div>
+
   )
 }
 
