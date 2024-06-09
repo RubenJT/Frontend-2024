@@ -1,7 +1,9 @@
 body{
-    background-image: linear-gradient(to right top, #051937, #003a58, #005b61, #087a52, #78923c);
-
-    
+    background-image: url('C:\Users\fires\Documents\1\proyectofinal\src\assets\Master.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
    
 
 
@@ -36,15 +38,4 @@ body{
     position: relative;
 }
 
-.card-item button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-}
 

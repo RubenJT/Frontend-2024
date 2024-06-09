@@ -16,9 +16,7 @@ const CallVehicules = () => {
         fetchData()
     }, [])
 
-    const handleInputChange = (event) => {
-        setSearchTerm(event.target.value)
-    }
+
 
     const handleSearch = () => {
         const foundVehicles = ApiData2.filter(vehicle => 
@@ -34,23 +32,23 @@ const CallVehicules = () => {
             prevSelected.filter(vehicle => vehicle.name !== name)
         )
     }
+    const handleRemoveall = () => {
+        
+        setSelectedVehicles([])
+    }
 
     return (
-        <div className="main-container">
+        <div className="vehicules-card">
             <div className="input-container">
-                <input 
-                    type="text" 
-                    placeholder="Search..." 
-                    value={searchTerm}
-                    onChange={handleInputChange}
-                />
-                <button onClick={handleSearch}>Search</button>
+         
+                <button style={{padding:20 }}  className='btn btn-primary' onClick={handleSearch}> <h1>Vehicules</h1> </button>
+                <button style={{padding:20 }}  className='btn btn-primary' onClick={handleRemoveall}> <h1>Delete</h1> </button>
             </div>
             <div className="cards-container">
                 {selectedVehicles.map((vehicle) => (
                     <div key={vehicle.name} className="card-item">
-                        <Vehicules2 vehicules={vehicle} />
-                        <button onClick={() => handleRemove(vehicle.name)}>Remove</button>
+                        <Vehicules2 handleRemove={handleRemove} vehicules={vehicle} />
+                       
                     </div>
                 ))}
             </div>

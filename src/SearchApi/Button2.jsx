@@ -1,10 +1,9 @@
-import { useState } from "react"
+
 import CallApi from "../api/CallApi"
 
 
 const Button = ({apiData,searchQuery,setFilteredData,setSearchQuery}) => {
-  const [filtered] = useState([])
-  const[filterByid]=useState([])
+
   //const[reset] = useState('')
     const handleSearch = (e) => {
         e.preventDefault()
@@ -26,16 +25,7 @@ const Button = ({apiData,searchQuery,setFilteredData,setSearchQuery}) => {
         setFilteredData(filterByTeam)
 
       }
-      const handleSearchByid = (e) => {
-        e.preventDefault()
-        const filterByid = apiData.filter((mission) =>
-          mission.missionNumber.includes(searchQuery),
-          
-        )
-      
-        setFilteredData(filterByid)
-
-      }
+  
 
 
 //<CallApi filtered={filtered} filterByid={filterByid}></CallApi>
@@ -61,7 +51,7 @@ const Button = ({apiData,searchQuery,setFilteredData,setSearchQuery}) => {
          <button onClick={handleSearch} className='btn btn-outline-danger' type="submit">Search</button>
             <button onClick={handleSearchByTeam} className='btn btn-outline-danger' type="submit">SearchByTeam</button>
            
-            <button onClick={handleSearchByid}  className='btn btn-outline-danger' type="submit">SearchByid</button>
+            
            
           
          

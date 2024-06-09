@@ -8,11 +8,12 @@ const App = () => {
 
     return (
 
-<div className="row" >
-<h1 color="#FFFFFF">Halo 5</h1>
+<div>
+<h1 style={{marginLeft:"600px"}} >Halo 5</h1>
 <div >
-<div  ><CallVehicules></CallVehicules></div>
+
     <CallApi></CallApi>
+    <div  ><CallVehicules></CallVehicules></div>
 
    
    
